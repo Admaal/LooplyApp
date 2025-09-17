@@ -1,69 +1,66 @@
-# React + TypeScript + Vite
+# LooplyApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LooplyApp es una aplicación web donde he aprendido y puesto en práctica distintos conocimientos clave de desarrollo frontend moderno, centrándome especialmente en React, TypeScript y buenas prácticas de testing.
 
-Currently, two official plugins are available:
+## ¿Qué he aprendido con este proyecto?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠️ Stack Tecnológico y Herramientas
 
-## Expanding the ESLint configuration
+- **React + TypeScript:** He estructurado toda la lógica de la aplicación usando componentes y hooks personalizados, aprovechando la seguridad y escalabilidad que ofrece TypeScript.
+- **Vite:** He utilizado Vite como bundler para desarrollo ultrarrápido y Hot Module Replacement.
+- **CSS Moderno:** He aplicado variables CSS, glassmorphism, gradients y un sistema de diseño responsivo y visualmente atractivo.
+- **Testing con Vitest y Testing Library:** He creado tests unitarios tanto para hooks personalizados como para componentes, asegurando el correcto funcionamiento de la lógica (por ejemplo, el contador y su hook asociado).
+- **ESLint y buenas prácticas:** Configuración avanzada de ESLint para mantener un código limpio, legible y consistente.
+- **Consumo de APIs:** Implementé integración con la API de Giphy para búsquedas y renderizado de resultados en tiempo real.
+- **Componentización y reutilización:** Separé la lógica en componentes reutilizables y modulares, como la barra de búsqueda, listas y tarjetas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 💡 Habilidades y conceptos prácticos
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Uso avanzado de hooks (como `useState` y hooks personalizados).
+- Manejo de tipados complejos y estructuras de datos en TypeScript.
+- Diseño y reutilización de componentes UI.
+- Implementación de pruebas automatizadas para lógica y UI.
+- Gestión de estado local y comunicación entre componentes.
+- Integración y consumo de servicios externos (APIs REST).
+- Organización de carpetas y patrones de arquitectura frontend moderna.
+- Experiencia real con la herramienta de testing Vitest y la librería @testing-library/react.
+- Aplicación de conceptos de diseño moderno: Glassmorphism, responsividad, color y UX.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ¿Qué incluye LooplyApp?
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Interfaz para buscar y visualizar GIFs desde Giphy.
+- Historial de búsquedas rápidas (chips).
+- Ejemplo de contador con lógica desacoplada y testeada.
+- Diseño moderno y responsivo.
+- Código limpio, tipado y bien organizado.
+- Pruebas unitarias para hooks y componentes.
+
+## Instalación y uso
+
+```bash
+git clone https://github.com/Admaal/LooplyApp.git
+cd LooplyApp
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Algunos archivos y conceptos destacados
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/GifsApp.tsx`: Componente principal que integra búsqueda, historial y renderizado de resultados.
+- `src/shared/components/SearchBar.tsx`: Barra de búsqueda reutilizable con manejo de estado y eventos.
+- `src/counter/hooks/useCounter.tsx`: Hook personalizado para lógica de contador, con pruebas unitarias.
+- `src/index.css`: Variables CSS y estilos modernos.
+- `src/gifs/actions/get-gifs-by-query.action.ts`: Acción para consumir la API de Giphy.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Testing
+
+Para ejecutar los tests:
+```bash
+npm run test
 ```
+
+---
+
+Este proyecto es una muestra de mi aprendizaje y evolución como desarrollador frontend, aplicando tecnologías modernas y buenas prácticas de desarrollo profesional.
+
+Desarrollado por Admaal 🚀
